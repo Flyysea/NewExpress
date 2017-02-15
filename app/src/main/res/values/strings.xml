@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NewExpress</string>
+
+
+    <string name="iamexpress">我是快递员</string>
+    <string name="iamcustomer">我是顾客</string>
+
+
+    <!--快递员功能-->
+    <string name="print_express_paper">设置</string>
+    <string name="track_position">收件</string>
+    <string name="send_package_notice">发件</string>
+
+    <!--管理员功能-->
+    <string name="manager_left">快递人员管理</string>
+    <string name="manager_right">系统设置</string>
+</resources>
