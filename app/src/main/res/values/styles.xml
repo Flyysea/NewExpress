@@ -78,5 +78,13 @@
     <style name="single_layout" parent="base_layout">
         <item name="android:background">@drawable/single_layout_selector</item>
     </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
 
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

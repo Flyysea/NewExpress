@@ -3,7 +3,7 @@
 
 
     <string name="iamexpress">我是快递员</string>
-    <string name="iamcustomer">我是顾客</string>
+    <string name="iamcustomer">我是网点管理员</string>
 
 
     <!--快递员功能-->

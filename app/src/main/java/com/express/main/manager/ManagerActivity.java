@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.express.main.R;
+import com.express.main.Util.T;
 import com.express.main.global.app.BaseActivity;
+import com.express.main.manager.activity.ExpressListActivity;
 
 /**
  * Created by Administrator on 2017-02-15.
@@ -15,6 +17,7 @@ public class ManagerActivity extends BaseActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_main);
+        initView();
     }
 
     public void initView(){
@@ -28,9 +31,11 @@ public class ManagerActivity extends BaseActivity implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.manager_left:
-
+                openActivity(ExpressListActivity.class);
+                T.showToast(mActivity,"1");
                 break;
             case R.id.manager_right:
+                T.showToast(mActivity,"2");
 
                 break;
         }

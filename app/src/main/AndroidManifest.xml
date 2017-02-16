@@ -47,6 +47,8 @@
         <activity android:name=".express.receiving.ReceivingActivity"></activity>
         <activity android:name=".express.ExpressMainActivity"></activity>
         <activity android:name=".manager.ManagerActivity"></activity>
+        <activity android:name=".manager.activity.ExpressListActivity"></activity>
+
 
         <!-- ORC 识别 -->
         <activity

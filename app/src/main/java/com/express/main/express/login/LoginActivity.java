@@ -21,25 +21,33 @@ import com.express.main.express.register.RegisterActivity;
 import com.express.main.global.app.BaseActivity;
 import com.express.main.global.app.Constant;
 import com.express.main.global.service.GlobalService;
+import com.express.main.manager.ManagerActivity;
 import com.idcard.CardInfo;
 import com.idcard.TFieldID;
 import com.idcard.TengineID;
 import com.ui.card.TRCardScan;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
+    public static void startActivity(Activity activity, int type) {
+        Intent intent = new Intent(activity, LoginActivity.class);
+        intent.putExtra("type", type);
+        activity.startActivity(intent);
+    }
+
 
     EditText deliverPhone;
     EditText deliverId;
 
     private String key;
 
+    private int type;
     public int RESULT_GET_CARD_OK = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         initView();
+        type=getIntent().getIntExtra("type",0);
     }
 
     @Override
@@ -69,7 +77,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
     private void doVerify(){
         dismissProgress();
-        openActivity(ExpressMainActivity.class);
+        switch (type){
+            case 0:
+                openActivity(ExpressMainActivity.class);
+                break;
+            case 1:
+                openActivity(ManagerActivity.class);
+                break;
+        }
     }
 
     @Override

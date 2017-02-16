@@ -32,7 +32,7 @@ public class MainActivity extends BaseActivity {
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity(LoginActivity.class);
+                LoginActivity.startActivity(mActivity,0);
                 finish();
             }
         });
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
         express.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity(LoginActivity.class);
+                LoginActivity.startActivity(mActivity,1);
                 finish();
             }
         });

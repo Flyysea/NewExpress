@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/refresh_operator_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        app:isLoadMore="true"
+        app:overlay="true"
+        android:layout_marginBottom="0dp"
+        app:wave_color="@color/transparent"
+        app:wave_show="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_operator_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background" />
+    </com.cjj.MaterialRefreshLayout>
+
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:text="暂时没有数据" />
+</RelativeLayout>
